@@ -1,0 +1,848 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*MENU*/
+header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.menu a {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color:gray;
+    text-transform: uppercase;
+    padding: 0 25px;
+}
+
+.menu a:hover {
+    color: lightgray;
+}
+
+.menu-mobile {
+    color: gray;
+    font-size: 30px;
+    display: none;
+}
+
+.social-media-links {
+    padding: 0 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: gray;
+    font-weight: 600;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: gray;
+}
+
+/*TITLE*/
+h1 {
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+    opacity: 0.7;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    opacity: 0.7;
+}
+
+/*IMAGE CONTAINER*/
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.image-slider, .image-slider:after {
+    margin: 0 auto;
+    width: 85%;
+    height: 900px;
+    position: relative;
+    left: 0px;
+    z-index: 0; 
+}
+
+.image-slider span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 30s linear infinite alternate 0s; 
+}
+
+.image-1 {
+    background-image: url(../assets/Civila-Ioana&Gabi-0122-web.jpg);
+    animation-delay: 1s;
+}
+
+.image-2 {
+    background-image: url(../assets/SMO04401-web.jpg);
+    animation-delay: 12s;
+}
+
+.image-3 {
+    background-image: url(../assets/Ioana&Radu-414-web.jpg);
+    animation-delay: 24s;
+}
+
+.image-4 {
+    background-image: url(../assets/Ioana&Vali-TTD-0202-web.jpg);
+    animation-delay: 36s;
+}
+
+.image-wrapper-arrows i {
+    font-size: 25px;
+    color: black;
+}
+
+.image-wrapper-arrows i:nth-of-type(1) {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+}
+
+.image-wrapper-arrows i:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+}
+
+section {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+hr {
+    width: 80px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+/*BLOG POSTS*/
+.blogpost-wrapper {
+    width: 65%;
+    height: 780px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.top, .bottom {
+    width: 100%;
+    height: 370px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.top-left, .bottom-left, .top-right, .bottom-right {
+    width: 550px;
+    height: 350px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.top-left {
+    background-image: url(../assets/thumbnail-nunta-EmmaGeorge-0082.jpg);
+    background-size: cover;
+}
+
+.top-right {
+    background-image: url(../assets/thumbnail-clatite-Markodor.jpg);
+    background-size: cover;
+}
+
+.bottom-left {
+    background-image: url(../assets/thumbnail-Optibis-0006-web.jpg);
+    background-size: cover;
+}
+
+.bottom-right {
+    background-image: url(../assets/thumbnail-Lavinia&Ionut-0621-web.jpg);
+    background-size: cover;
+}
+
+.top-left-name, .top-right-name, .bottom-right-name, .bottom-left-name {
+    width: 300px;
+    height: 70px;
+    background-color:#191919;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+}
+
+.shortcut-links, .service-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.shortcut-links a {
+    border: 1px solid lightgray;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:gray;
+}
+
+.shortcut-links a:hover {
+    background-color: #191919;
+    color: white;
+}
+
+/*SERVICII*/
+.service-wrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.service-wrapper i {
+    font-size: 36px;
+    color: darkgray;
+}
+
+.event-wrapper div, .sessions-wrapper div, .corporate-wrapper div {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.event-wrapper p, .sessions-wrapper p, .corporate-wrapper p {
+    font-size: 16px;
+    padding: 0 40px;
+}
+
+/*ABOUT*/
+.about-me-wrapper {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-me-width {
+    align-self: center;
+}
+
+.about-me-text-wrapper {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 50px 10px;
+}
+
+.about-me-image-wrapper {
+    width: 400px;
+    height: 400px;
+}
+
+.about-me-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.about-me-text-wrapper div {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.about-me-text-wrapper p {
+    color: gray;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/*TESTIMONIALS*/
+.testimonial-wrapper {
+    width: 70%;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-wrapper p, .testimonial-wrapper div {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.testimonial-wrapper i {
+    font-size: 35px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: gray;
+}
+
+/*CONTACT FORM*/
+section form {
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name, #email, #subject, #message, #findOut {
+    width: 500px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+    margin: 20px 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#name, #email {
+    width: 250px;
+    padding: 30px 0 ;
+}
+
+::placeholder { 
+    color: lightgray;
+}
+
+.submit-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+    margin-right: 25px;
+}
+
+/*FOOTER*/
+footer {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: black;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-container {
+    width: 30%;
+    box-sizing: border-box;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.footer-container div {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+}
+
+.footer-links a:hover {
+    color: lightgray;
+}
+
+/*ABOUT ME PAGE*/
+.about-me-wrapper {
+    width: 70%;
+}
+
+.circles {
+    width: 75%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.circle-1, .circle-2, .circle-3, .circle-4 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 100%;
+    text-align: center;
+    padding: 90px 0;
+    font-size: 22px;
+}
+
+.circle-text-1, .circle-text-2, .circle-text-3, .circle-text-4 {
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.partner-icons {
+    width: 75%;
+    height: 200px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mywedd {
+    width: 100px;
+    height: 150px;
+    align-self: center;
+}
+
+.mywedd img {
+    width: auto;
+    height: 100%;
+}
+
+.foto-cam {
+    width: 300px;
+    align-self: center;
+}
+
+.foto-cam img {
+    width: 100%;
+    height: auto;
+}
+
+.wedd-mag {
+    width: 200px;
+    align-self: center;
+}
+
+.wedd-mag img {
+    width: 100%;
+    height: auto;
+}
+
+/*CONTACT PAGE*/
+.contact-page-container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+
+aside {
+    font-family: 'Roboto', sans-serif;
+    width: 35%;
+    flex-direction: column;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 20px 50px 30px;
+    padding: 100px 40px 50px;
+}
+
+.aside-info p, .aside-info div {
+    line-height: 30px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .menu, .social-media-links {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+        margin-right: 50px;
+    }
+
+    .logo {
+        margin-top: 20px;
+    }
+
+    /*TITLE*/
+    h1 {
+        margin-top: 20px;
+        font-size: 60px; 
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    /*IMAGE CONTAINER*/
+    .image-container {
+        width: 70%;
+    }
+
+    .image-wrapper {
+        height: 600px;
+    }
+
+    .image-wrapper-arrows i {
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 35px;
+        margin-top: 80px;
+    }
+
+    /*BLOG POSTS*/
+    .blogpost-wrapper {
+        width: 100%;
+        height: 650px;
+    }
+
+    .top, .bottom {
+        height: 320px;
+    }
+
+    .top-left, .bottom-left, .top-right, .bottom-right {
+        width: 450px;
+        height: 300px;
+    }
+
+    .top-left-name, .top-right-name, .bottom-right-name, .bottom-left-name {
+        width: 300px;
+        height: 55px;
+        font-size: 16px;
+        padding-top: 15px;
+    }
+
+    .shortcut-links, .service-wrapper {
+        width: 100%;
+    }
+
+    /*SERVICII*/
+    .service-wrapper i {
+        font-size: 30px;
+    }
+
+    .event-wrapper div, .sessions-wrapper div, .corporate-wrapper div {
+        font-size: 20px;
+    }
+
+    .event-wrapper p, .sessions-wrapper p, .corporate-wrapper p {
+        font-size: 15px;
+    }
+
+    /*ABOUT ME*/
+    .about-me-wrapper {
+        width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .about-me-image-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-me-text-wrapper div {
+        font-size: 25px;
+    }
+
+    .about-me-text-wrapper p {
+        font-size: 14px;
+    }
+
+    /*TESTIMONIALS*/
+    .testimonial-wrapper {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-wrapper p, .testimonial-wrapper div {
+        width: 70%;
+        padding: 20px 0;
+        font-size: 14px;
+    }
+
+    .testimonial-wrapper i {
+        font-size: 30px;
+        right: 40px;
+        top: 20%;
+    }
+
+    /*TESTIMONALE*/
+    footer {
+        padding: 10px 0;
+    }
+    
+    .footer-container {
+        width: 70%;
+    }
+
+    /*ABOUT ME PAGE*/
+    .circles {
+        width: 100%;
+    }    
+
+    .circle-1, .circle-2, .circle-3, .circle-4 {
+        width: 150px;
+        height: 150px;
+        padding: 60px 0;
+        font-size: 20px;
+    }
+
+    .circle-text-1, .circle-text-2, .circle-text-3, .circle-text-4 {
+        width: 150px;
+    }
+
+    .partner-icons {
+        width: 100%;
+        height: 120px;
+        margin: 80px auto;
+    }
+
+    .mywedd {
+        width: 80px;
+        height: 150px;
+        align-self: center;
+    }
+    
+    .foto-cam {
+        width: 260px;
+        align-self: center;
+    }
+    
+    .wedd-mag {
+        width: 170px;
+        align-self: center;
+    }
+
+
+    /*CONTACT PAGE*/
+    .contact-page-container {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    aside {
+        font-size: 18px;
+        margin: 30px 30px 30px 100px;
+        padding: 70px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    h2, .container {
+        display: none;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .blogpost-wrapper {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .top, .bottom {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 630px;
+    }
+
+    .top-left, .bottom-left, .top-right, .bottom-right {
+        width: 450px;
+        height: 300px;
+        position: relative;
+    }
+
+    .shortcut-links {
+        width: 100%;
+    }
+
+    .shortcut-links a {
+        font-size: 13px;
+        text-align: center;
+        margin: 20px 10px;
+        padding: 15px 20px;
+    }
+
+    .service-wrapper {
+        flex-direction: column;
+    }
+
+    .service-wrapper div {
+        padding: 10px 0;
+    }
+
+    .service-wrapper i {
+        font-size: 20px;
+    }
+    
+    .event-wrapper div, .sessions-wrapper div, .corporate-wrapper div {
+        padding: 0px 15px;
+    }
+    
+    .event-wrapper p, .sessions-wrapper p, .corporate-wrapper p {
+        font-size: 14px;
+        padding: 0 50px;
+    }
+
+    .about-me-wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about-me-text-wrapper {
+        width: 100%;
+        padding: 50px 50px;
+    }
+
+    /*TESTIMONIALS*/
+    .testimonial-wrapper {
+        width: 100%;
+    }
+
+    .testimonial-wrapper p, .testimonial-wrapper div {
+        width: 80%;
+        padding: 10px 0;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-wrapper i {
+        font-size: 20px;
+        right: 20px;
+        top: 15%;
+    }
+
+    /*CONTACT FORM*/
+    form {
+        width: 100%;
+    }
+
+    #name, #email, #subject, #message, #findOut {
+        width: 350px;
+        padding: 15px 0;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    #name, #email {
+        width: 175px;
+        padding: 15px 0 ;
+    }
+
+    .submit-wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 5px 10px;
+        margin: 10px 0;
+        order: 2;
+    }
+
+    .gdpr {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    /*FOOTER*/
+    .footer-container {
+        width: 90%;
+    }
+
+    .circles, .partner-icons {
+        display: none;
+    }
+
+    /*CONTACT PAGE*/
+
+    aside {
+        display: none;
+    }
+
+    .contact-form {
+        margin: 0 auto;
+    }
+}
