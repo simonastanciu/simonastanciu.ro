@@ -6,9 +6,17 @@ html, body {
 }
 
 /*MENU*/
+.parallax-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    margin-top: -47px;
+}
+
 header {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    width: 100%;
     height: 100px;
     background-color: white;
     display: flex;
@@ -62,9 +70,14 @@ header {
 }
 
 /*TITLE*/
+main {
+    position: relative;
+    top: 100px;
+}
+
 h1 {
     font-family: 'Mr De Haviland', cursive;
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 100;
     text-align: center;
     opacity: 0.7;
@@ -72,7 +85,7 @@ h1 {
 
 h2 {
     font-family: 'Roboto', sans-serif; 
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     text-align: center;
     margin-top: -30px;
@@ -96,7 +109,7 @@ h2 {
 }
 
 .image-slider, .image-slider:after {
-    margin: 0 auto;
+    margin: 50px auto;
     width: 85%;
     height: 900px;
     position: relative;
@@ -164,8 +177,8 @@ h3 {
     font-size: 40px;
     font-weight: 500;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin: 150px 0 40px;
+    padding: 20px 0 0;
 }
 
 hr {
@@ -195,6 +208,7 @@ hr {
     height: 350px;
     margin: 0 10px;
     position: relative;
+    cursor: pointer;
 }
 
 .top-left {
@@ -217,6 +231,11 @@ hr {
     background-size: cover;
 }
 
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
 .top-left-name, .top-right-name, .bottom-right-name, .bottom-left-name {
     width: 300px;
     height: 70px;
@@ -226,10 +245,16 @@ hr {
     text-align: center;
     padding-top: 20px;
     font-size: 22px;
+    text-decoration: none;
     position: absolute;
     bottom: 25px;
     right: 0;
+    opacity: 0;
+    cursor: pointer;
 }
+
+.top-left-name:hover, .top-right-name:hover,.bottom-right-name:hover, .bottom-left-name:hover { 
+    animation: fadeIn 1s ease-in-out forwards;}
 
 .shortcut-links, .service-wrapper {
     width: 60%;
@@ -498,6 +523,9 @@ footer {
     width: 100%;
     height: auto;
 }
+
+
+
 
 /*CONTACT PAGE*/
 .contact-page-container {
